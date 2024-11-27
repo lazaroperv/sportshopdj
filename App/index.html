@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD de Usuarios</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <h1>Gestión de Usuarios</h1>
+
+  <!-- Formulario de Crear Usuario -->
+  <h2>Crear Usuario</h2>
+  <form id="createUserForm">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <button type="submit">Crear Usuario</button>
+  </form>
+
+  <h2>Lista de Usuarios</h2>
+  <ul id="userList"></ul>
+
+  <h2>Actualizar Usuario</h2>
+  <label for="updateId">ID de Usuario:</label>
+  <input type="text" id="updateId" name="updateId"><br><br>
+  <label for="updateName">Nuevo Nombre:</label>
+  <input type="text" id="updateName" name="updateName"><br><br>
+  <label for="updateEmail">Nuevo Email:</label>
+  <input type="email" id="updateEmail" name="updateEmail"><br><br>
+  <button onclick="updateUser()">Actualizar Usuario</button><br><br>
+
+  <h2>Eliminar Usuario</h2>
+  <label for="deleteId">ID de Usuario:</label>
+  <input type="text" id="deleteId" name="deleteId"><br><br>
+  <button onclick="deleteUser()">Eliminar Usuario</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
